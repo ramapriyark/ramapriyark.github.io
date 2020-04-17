@@ -1,26 +1,18 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Aleo");
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 body {
-  font-family: "Nunito", arial, sans-serif;
+  font-family: "Aleo", serif;
   margin: 0 auto;
+  padding: 20px 40px;
   max-width: 800px;
   background: #fff;
   color: #101010;
-}
-
-nav {
-  float: right;
-}
-nav > ul {
-  list-style-type: none;
-}
-
-nav > ul > li {
-  float: left;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
 }
 
 main {
@@ -33,9 +25,11 @@ img {
 }
 
 h1 {
-  font-family: "Roboto";
   font-weight: bold;
   color: #f16529;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-align: center;
 }
 
 a {
@@ -60,4 +54,10 @@ a:active {
   color: #fafafa;
   border-radius: 8px;
   text-decoration: none;
+}
+
+small {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  color: #333;
 }
