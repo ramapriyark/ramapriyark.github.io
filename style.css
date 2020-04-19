@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Aleo");
 
+:root {
+  --main-bg-color: #FFFFFF;
+  --main-text-color: #930077;
+  --heading-color: #e61c5d;
+  --link-color: #2965F1;
+  --color1: #930077;
+  --color2: #e61c5d;
+  --color3: #ffbd39;
+}
+
 html,
 body {
   min-height: 100%;
@@ -9,8 +19,8 @@ body {
   margin: 0 auto;
   padding: 20px 40px;
   max-width: 800px;
-  background: #fff;
-  color: #101010;
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
   font-size: 1.1rem;
   line-height: 1.5rem;
 }
@@ -26,34 +36,84 @@ img {
 
 h1 {
   font-weight: bold;
-  color: #f16529;
-  font-size: 3rem;
-  line-height: 3rem;
+  color: var(--heading-color);
+  font-size: 75px;
+  line-height: 75px;
   text-align: center;
 }
 
+.heart {
+  display: inline-block;
+  background: var(--heading-color);
+  background: linear-gradient(90deg, 
+            var(--color3) 0%, 
+            var(--color3) 6%, 
+            var(--color2) 6%, 
+            var(--color2) 55%, 
+            var(--color1) 55%, 
+            var(--color1) 100%);
+  height: 50px;
+  width: 50px;
+  transform: rotate(45deg);
+  margin: 0 20px;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background: var(--heading-color);
+  border-radius: 50%;
+  height: 50px;
+  position: absolute;
+  width: 50px;
+  top: -25px;
+  left: 0;
+}
+
+.heart:before {
+  background: linear-gradient(90deg, 
+  var(--color3) 0%, 
+  var(--color3) 55%, 
+  var(--color2) 55%, 
+  var(--color2) 100%);
+  top: 0;
+  left: -25px;
+}
+
+.heart:after {
+  background: linear-gradient(90deg, 
+            var(--color3) 0%, 
+            var(--color3) 6%, 
+            var(--color2) 6%, 
+            var(--color2) 55%, 
+            var(--color1) 55%, 
+            var(--color1) 100%);
+}
+
 a {
-  color: #2965f1;
+  color: var(--link-color);
   padding: 5px;
 }
 
 a:visited {
-  color: #2965f1;
+  color: var(--link-color);
 }
 
 a:hover,
 a:visited:hover,
 a:focus,
 a:active {
-  background: linear-gradient(
-    0deg,
-    rgba(38, 77, 228, 1) 0%,
-    rgba(41, 101, 241, 1) 35%,
-    rgba(1, 200, 239, 1) 100%
-  );
-  color: #fafafa;
-  border-radius: 8px;
+  background: linear-gradient(315deg, 
+            var(--color1) 0%, 
+            var(--color1) 33%, 
+            var(--color2) 33%, 
+            var(--color2) 66%, 
+            var(--color3) 66%, 
+            var(--color3) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
+  font-weight: bold;
 }
 
 small {
